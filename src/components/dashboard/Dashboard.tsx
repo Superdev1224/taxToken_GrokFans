@@ -108,6 +108,7 @@ export function Dashboard() {
         <ReferralLink
           link={referralLink}
           code={loading ? null : referralCode}
+          loading={loading}
         />
 
         <GlassCard className="space-y-4">
