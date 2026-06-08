@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import { useAccount } from "wagmi";
 import { useSearchParams } from "next/navigation";
 import { generateReferralCode } from "@/lib/utils";
-import { APP_URL } from "@/lib/config";
+import { useAppUrl } from "@/hooks/useAppUrl";
 
 const REF_KEY = "grokfans_ref";
 
@@ -32,6 +32,7 @@ type ReferralsResponse = {
 export function useReferral() {
   const { address, isConnected } = useAccount();
   const searchParams = useSearchParams();
+  const appUrl = useAppUrl();
   const [referralCode, setReferralCode] = useState<string | null>(null);
   const [rewards, setRewards] = useState<RewardsResponse | null>(null);
   const [referrals, setReferrals] = useState<ReferralsResponse | null>(null);
@@ -83,9 +84,9 @@ export function useReferral() {
   }, [isConnected, address, register, fetchData]);
 
   const referralLink = referralCode
-    ? `${APP_URL}?ref=${referralCode}`
+    ? `${appUrl}?ref=${referralCode}`
     : address
-      ? `${APP_URL}?ref=${generateReferralCode(address)}`
+      ? `${appUrl}?ref=${generateReferralCode(address)}`
       : "";
 
   return {
