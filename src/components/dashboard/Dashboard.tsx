@@ -3,6 +3,8 @@
 import { useAccount } from "wagmi";
 import { useGrokFans } from "@/hooks/useGrokFans";
 import { useReferral } from "@/hooks/useReferral";
+import { useStats } from "@/hooks/useStats";
+import { CommunityStats } from "@/components/dashboard/CommunityStats";
 import { RewardCard } from "@/components/dashboard/RewardCard";
 import { ReferralLink } from "@/components/dashboard/ReferralLink";
 import { FeeBreakdown } from "@/components/dashboard/FeeBreakdown";
@@ -31,6 +33,7 @@ export function Dashboard() {
   } = useGrokFans();
   const { referralLink, referralCode, rewards, referrals, loading } =
     useReferral();
+  const { stats, loading: statsLoading } = useStats();
 
   if (!isConnected) {
     return (
@@ -48,6 +51,13 @@ export function Dashboard() {
           Connect your wallet to track Builder & Leader rewards, generate
           referral links, and grow your network on BNB Smart Chain.
         </p>
+        <div className="mb-8 w-full max-w-md">
+          <CommunityStats
+            totalFans={stats?.totalFans ?? 0}
+            holders={stats?.holders ?? null}
+            loading={statsLoading}
+          />
+        </div>
         <ConnectButton />
         <p className="mt-6 text-xs text-white/30">
           Optimized for Trust Wallet · BSC {CHAIN_ID === 56 ? "Mainnet" : "Testnet"}
@@ -79,6 +89,12 @@ export function Dashboard() {
           </p>
         </GlassCard>
       </div>
+
+      <CommunityStats
+        totalFans={stats?.totalFans ?? 0}
+        holders={stats?.holders ?? null}
+        loading={statsLoading}
+      />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <RewardCard
