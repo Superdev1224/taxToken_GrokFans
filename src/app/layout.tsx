@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Web3Provider } from "@/providers/Web3Provider";
 import { Header } from "@/components/layout/Header";
+import { Sidebar } from "@/components/layout/Sidebar";
 import { Background } from "@/components/layout/Background";
 
 const geistSans = localFont({
@@ -36,9 +37,12 @@ export default function RootLayout({
         <Web3Provider>
           <Background />
           <Header />
-          <main className="mx-auto max-w-6xl px-4 py-6 pb-24 sm:py-8">
-            {children}
-          </main>
+          <div className="mx-auto flex w-full max-w-7xl">
+            <Sidebar />
+            <main className="min-w-0 flex-1 px-4 py-6 pb-24 sm:py-8">
+              {children}
+            </main>
+          </div>
         </Web3Provider>
       </body>
     </html>
