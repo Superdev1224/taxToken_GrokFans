@@ -72,10 +72,10 @@ function MobileDrawer({
             className="flex items-center gap-2"
           >
             <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-neon-cyan/50 bg-neon-cyan/10">
-              <span className="text-xs font-bold text-neon-cyan">GF</span>
+              <span className="text-xs font-bold text-neon-cyan">FL</span>
             </div>
             <span className="text-base font-bold tracking-wide text-white">
-              Grok<span className="text-neon-cyan text-glow-cyan">FANS</span>
+              Fl<span className="text-neon-cyan text-glow-cyan">ow</span>
             </span>
           </Link>
           <button
@@ -102,10 +102,10 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-neon-cyan/50 bg-neon-cyan/10 shadow-glow-cyan">
-            <span className="text-sm font-bold text-neon-cyan">GF</span>
+            <span className="text-sm font-bold text-neon-cyan">FL</span>
           </div>
           <span className="text-lg font-bold tracking-wide text-white">
-            Grok<span className="text-neon-cyan text-glow-cyan">FANS</span>
+            Fl<span className="text-neon-cyan text-glow-cyan">ow</span>
           </span>
         </Link>
 

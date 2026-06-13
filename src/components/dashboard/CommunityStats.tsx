@@ -24,7 +24,7 @@ export function CommunityStats({ totalFans, holders, loading }: Props) {
           </div>
           <div>
             <p className="text-xs font-medium uppercase tracking-wider text-neon-cyan/70">
-              Total Fans
+              Total Members
             </p>
             <p className="text-2xl font-bold text-neon-cyan text-glow-cyan">
               {loading ? "…" : formatCount(totalFans)}

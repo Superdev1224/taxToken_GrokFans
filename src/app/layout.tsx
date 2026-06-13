@@ -13,10 +13,10 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "GrokFANS — Referral Dashboard",
+  title: "Flow — Referral Dashboard",
   description:
-    "Track Builder & Leader rewards, generate referral links, and grow your GrokFANS network on BNB Smart Chain.",
-  keywords: ["GrokFANS", "BSC", "referral", "crypto", "Web3"],
+    "Track Builder & Leader rewards, generate referral links, and grow your Flow network on BNB Smart Chain.",
+  keywords: ["Flow", "FLOW", "BSC", "referral", "crypto", "Web3"],
 };
 
 export const viewport: Viewport = {

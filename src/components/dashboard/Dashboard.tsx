@@ -44,7 +44,7 @@ export function Dashboard() {
           </div>
         </div>
         <h1 className="mb-3 text-3xl font-bold text-white sm:text-4xl">
-          Grok<span className="text-neon-cyan text-glow-cyan">FANS</span>{" "}
+          Fl<span className="text-neon-cyan text-glow-cyan">ow</span>{" "}
           Dashboard
         </h1>
         <p className="mb-8 max-w-md text-white/50">
@@ -79,7 +79,7 @@ export function Dashboard() {
             Dashboard
           </h1>
           <p className="text-sm text-white/40">
-            Track rewards and grow your GrokFANS network
+            Track rewards and grow your Flow network
           </p>
         </div>
         <GlassCard className="!p-3">

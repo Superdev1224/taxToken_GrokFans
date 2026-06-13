@@ -61,8 +61,8 @@ export function useGrokFans() {
   return {
     balance,
     balanceFormatted: balance ? formatTokenAmount(balance, decimals) : "0",
-    name: name ?? "GrokFANS",
-    symbol: symbol ?? "Grok2",
+    name: name ?? "Flow",
+    symbol: symbol ?? "FLOW",
     decimals,
     builderFee,
     leaderFee,

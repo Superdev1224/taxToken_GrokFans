@@ -19,7 +19,7 @@ export default function WalletPage() {
         <Wallet className="mb-4 h-12 w-12 text-neon-cyan/50" />
         <h1 className="mb-2 text-2xl font-bold text-white">My Wallet</h1>
         <p className="mb-6 max-w-sm text-white/50">
-          Connect your wallet to view your GrokFANS balance and token details.
+          Connect your wallet to view your Flow balance and token details.
         </p>
         <ConnectButton />
       </div>

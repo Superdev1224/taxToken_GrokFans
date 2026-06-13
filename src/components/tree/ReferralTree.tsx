@@ -13,6 +13,7 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import type { TreeNode } from "@/lib/supabase/types";
+import { fetchTree } from "@/lib/referralApi";
 import { truncateAddress } from "@/lib/utils";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Loader2 } from "lucide-react";
@@ -106,8 +107,7 @@ export function ReferralTree({ wallet }: Props) {
     async function load() {
       setLoading(true);
       try {
-        const res = await fetch(`/api/tree?wallet=${wallet.toLowerCase()}`);
-        const data = await res.json();
+        const data = await fetchTree(wallet);
         setOffline(!!data.offline);
 
         if (data.tree) {

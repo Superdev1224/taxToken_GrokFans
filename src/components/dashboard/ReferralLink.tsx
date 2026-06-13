@@ -67,7 +67,7 @@ export function ReferralLink({ link, code, loading = false }: Props) {
     setShowQr((prev) => !prev);
   };
 
-  const shareMessage = "Join GrokFANS — earn Builder & Leader rewards on BNB Smart Chain!";
+  const shareMessage = "Join Flow — earn Builder & Leader rewards on BNB Smart Chain!";
 
   const shareOnX = () => {
     if (!link) return;

@@ -11,7 +11,7 @@ export function truncateAddress(address: string, chars = 4): string {
 
 export function generateReferralCode(wallet: string): string {
   const hash = wallet.slice(2, 10).toLowerCase();
-  return `gf${hash}`;
+  return `fl${hash}`;
 }
 
 export function formatTokenAmount(
